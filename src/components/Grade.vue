@@ -5,7 +5,7 @@
     <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
       <el-form :inline="true" :model="filters">
         <el-form-item label="学号：">
-          <el-input v-model="filters.medicalRecord_id" placeholder="请输入学号"></el-input>
+          <el-input v-model="filters.input_id" placeholder="请输入学号"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" icon="el-icon-search" v-on:click="getGrade()">查询</el-button>
@@ -16,12 +16,12 @@
     <template>
       <el-table ref="multipleTable" :data="gradeList" highlight-current-row v-loading="loading" tooltip-effect="dark" style="width: 100%;" @selection-change="handleSelectionChange">
         <el-table-column type="selection" width="55"/>
-        <el-table-column prop="id" label="学号" width="200" sortable>{{student.student_id}}</el-table-column>
-        <el-table-column prop="name" label="姓名" width="200">{{student.student_name}}</el-table-column>
-        <el-table-column prop="chinese" label="语文成绩" width="200" sortable>{{student.student_chinese}}</el-table-column>
-        <el-table-column prop="math" label="数学成绩" width="200" sortable>{{student.student_math}}</el-table-column>
-        <el-table-column prop="english" label="英语成绩" width="200" sortable>{{student.student_english}}</el-table-column>
-        <el-table-column prop="grade" label="总成绩" width="200" sortable>{{student.student_grade}}</el-table-column>
+        <el-table-column prop="id" label="学号" width="200" sortable/>
+        <el-table-column prop="name" label="姓名" width="200"/>
+        <el-table-column prop="chinese" label="语文成绩" width="200" sortable/>
+        <el-table-column prop="math" label="数学成绩" width="200" sortable/>
+        <el-table-column prop="english" label="英语成绩" width="200" sortable/>
+        <el-table-column prop="grade" label="总成绩" width="200" sortable/>
       </el-table>
     </template>
   </section>
@@ -65,20 +65,20 @@ export default {
     getGradeList() {
       this.gradeList = [
         {
-          student_id: 1,
-          student_name: "Sam",
-          student_chinese: 120,
-          student_math: 145,
-          student_english: 145,
-          student_grade: 410
+          id: 1,
+          name: "Sam",
+          chinese: 120,
+          math: 145,
+          english: 145,
+          grade: 410
         },
         {
-          student_id: 2,
-          student_name: "Bob",
-          student_chinese: 88,
-          student_math: 98,
-          student_english: 95,
-          student_grade: 278
+          id: 2,
+          name: "Bob",
+          chinese: 88,
+          math: 98,
+          english: 95,
+          grade: 278
         }
       ];
       this.loading = false;

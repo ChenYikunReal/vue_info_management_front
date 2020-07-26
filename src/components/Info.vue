@@ -5,7 +5,7 @@
     <el-col :span="24" class="toolbar" style="padding-bottom: 0px;">
       <el-form :inline="true" :model="filters">
         <el-form-item label="学号：">
-          <el-input v-model="filters.medicalRecord_id" placeholder="请输入学号"></el-input>
+          <el-input v-model="filters.input_id" placeholder="请输入学号"/>
         </el-form-item>
         <el-form-item>
           <el-button type="primary" icon="el-icon-search" v-on:click="getInfo()">查询</el-button>
@@ -15,13 +15,13 @@
     <!--列表-->
     <template>
       <el-table ref="multipleTable" :data="studentList" highlight-current-row v-loading="loading" tooltip-effect="dark" style="width: 100%;" @selection-change="handleSelectionChange">
-        <el-table-column type="selection" width="55"></el-table-column>
-        <el-table-column prop="id" label="学号" width="200" sortable></el-table-column>
-        <el-table-column prop="name" label="姓名" width="200"></el-table-column>
-        <el-table-column prop="age" label="年龄" width="150" sortable></el-table-column>
-        <el-table-column prop="birthday" label="生日" width="200" sortable></el-table-column>
-        <el-table-column prop="email" label="电子邮箱" width="250"></el-table-column>
-        <el-table-column prop="country" label="国籍" width="200"></el-table-column>
+        <el-table-column type="selection" width="55"/>
+        <el-table-column prop="id" label="学号" width="200" sortable/>
+        <el-table-column prop="name" label="姓名" width="200"/>
+        <el-table-column prop="age" label="年龄" width="150" sortable/>
+        <el-table-column prop="birthday" label="生日" width="200" sortable/>
+        <el-table-column prop="email" label="电子邮箱" width="250"/>
+        <el-table-column prop="country" label="国籍" width="200"/>
       </el-table>
     </template>
   </section>
@@ -65,20 +65,20 @@ export default {
     getStudentInfo() {
       this.studentList = [
         {
-          student_id: 1,
-          student_name: "Sam",
-          student_age: 21,
-          student_birthday: new Date('1999-05-04'),
-          student_email: "123456789@qq.com",
-          student_country: "China"
+          id: 1,
+          name: "Sam",
+          age: 21,
+          birthday: new Date('1999-05-04'),
+          email: "123456789@qq.com",
+          country: "China"
         },
         {
-          student_id: 2,
-          student_name: "Bob",
-          student_age: 35,
-          student_birthday: new Date('1985-12-03'),
-          student_email: "bobbob@gmail.com",
-          student_country: "USA"
+          id: 2,
+          name: "Bob",
+          age: 35,
+          birthday: new Date('1985-12-03'),
+          email: "bobbob@gmail.com",
+          country: "USA"
         }
       ];
       this.loading = false;

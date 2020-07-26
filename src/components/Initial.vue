@@ -30,7 +30,6 @@
     width: 100%;
   }
   .whole {
-    /*margin: 30px;*/
     margin-left: 70px;
   }
   .block {
