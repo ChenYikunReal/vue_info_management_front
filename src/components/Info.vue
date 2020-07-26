@@ -68,7 +68,7 @@ export default {
           id: 1,
           name: "Sam",
           age: 21,
-          birthday: new Date('1999-05-04'),
+          birthday: new Date('1999-05-04').toLocaleDateString(),
           email: "123456789@qq.com",
           country: "China"
         },
@@ -76,7 +76,7 @@ export default {
           id: 2,
           name: "Bob",
           age: 35,
-          birthday: new Date('1985-12-03'),
+          birthday: new Date('1985-12-03').toLocaleDateString(),
           email: "bobbob@gmail.com",
           country: "USA"
         }

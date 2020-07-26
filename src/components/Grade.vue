@@ -51,7 +51,7 @@ export default {
     };
   },
   methods: {
-    //获取用户病历信息
+    //获取学生成绩信息
     getGrade() {
       this.loading = true;
       setTimeout(() => {
