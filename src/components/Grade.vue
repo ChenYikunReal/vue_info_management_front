@@ -63,24 +63,15 @@ export default {
       }, 1500);
     },
     getGradeList() {
-      this.gradeList = [
-        {
-          id: 1,
-          name: "Sam",
-          chinese: 120,
-          math: 145,
-          english: 145,
-          grade: 410
-        },
-        {
-          id: 2,
-          name: "Bob",
-          chinese: 88,
-          math: 98,
-          english: 95,
-          grade: 278
+      axios.get('/getGrade', {
+        params: {
+          id: this.filters.input_id
         }
-      ];
+      }).then(res => {
+        this.gradeList = res.data;
+      }).catch(function (error) {
+        console.log(error);
+      });
       this.loading = false;
     },
     handleSelectionChange(val) {

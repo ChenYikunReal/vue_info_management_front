@@ -4,6 +4,11 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 
+import axios from 'axios'
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = '/api'  //关键代码
+Vue.config.productionTip = false
+
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 router.beforeEach((to, from, next) => {

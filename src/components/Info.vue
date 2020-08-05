@@ -40,7 +40,7 @@ export default {
         student_id: 0,
         student_name: "",
         student_age: 0,
-        student_birthday: new Date().toLocaleDateString(),
+        student_birthday: "",
         student_email: "",
         student_country: ""
       },
@@ -63,24 +63,17 @@ export default {
       }, 1500);
     },
     getStudentInfo() {
-      this.studentList = [
-        {
-          id: 1,
-          name: "Sam",
-          age: 21,
-          birthday: new Date('1999-05-04').toLocaleDateString(),
-          email: "123456789@qq.com",
-          country: "China"
-        },
-        {
-          id: 2,
-          name: "Bob",
-          age: 35,
-          birthday: new Date('1985-12-03').toLocaleDateString(),
-          email: "bobbob@gmail.com",
-          country: "USA"
+      axios.get('/getInfo', {
+        params: {
+          id: this.filters.input_id
         }
-      ];
+      }).then(res => {
+        this.studentList = res.data;
+        // 调整日期时间字符串格式
+        this.studentList.forEach(t=>t["birthday"]=t["birthday"].substr(0, 10));
+      }).catch(function (error) {
+        console.log(error);
+      });
       this.loading = false;
     },
     handleSelectionChange(val) {
