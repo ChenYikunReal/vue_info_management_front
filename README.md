@@ -15,9 +15,9 @@
 
 ## 设计表格所参照的数据库表
 - 学生个人信息表`stu_info`<br/>
-![在这里插入图片描述](static/stu_info.PNG`)
+![在这里插入图片描述](static/stu_info.PNG)
 - 学生个人成绩表`stu_grade`<br/>
-![在这里插入图片描述](static/stu_grade.PNG`)
+![在这里插入图片描述](static/stu_grade.PNG)
 
 ## Vue组件对应的界面
 - Grade.vue : 学生成绩显示页面 [`需要前后端连接`]
