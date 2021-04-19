@@ -29,7 +29,7 @@
 - Login.vue : 登录页面 [`需要前后端连接`]
 
 ## 项目后端Github地址
-[后端源码](https://github.com/ChenYikunReal/ssm_info_management_backend)
+[后端源码](../../../ssm_info_management_backend)
 
 ## 遇到的困难与解决方案
 - [Vue之Axios跨域问题解决方案](https://blog.csdn.net/wh_xmy/article/details/87705840)
