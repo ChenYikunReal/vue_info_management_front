@@ -3,6 +3,8 @@
 基于Vue.js实现
 前后端数据交互使用Axios
 
+![](static/login.png)
+
 ## 提交日志
 - 根据模板搭建项目结构 + 编写code
 - 修复查询后加载不正确的Bug
